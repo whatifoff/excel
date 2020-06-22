@@ -1,23 +1,20 @@
 const path = require('path')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HTMLWebpackPlugin = require('html-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-// const { isError } = require('util')
 
 const isProd = process.env.NODE_ENV === 'production'
 const isDev = !isProd
 
-const filename = (ext) => {
-  return isDev ? `bundle.${ext}` : `bundle.[hash].${ext}`
-}
+const filename = (ext) => (isDev ? `bundle.${ext}` : `bundle.[hash].${ext}`)
 
 const jsLoaders = () => {
   const loaders = [
     {
-      loader: {
-        loader: 'babel-loader',
-        options: { presets: ['@babel/preset-env'] }
+      loader: 'babel-loader',
+      options: {
+        presets: ['@babel/preset-env']
       }
     }
   ]
@@ -51,7 +48,7 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin({
+    new HTMLWebpackPlugin({
       template: 'index.html',
       minify: {
         removeComments: isProd,
@@ -79,7 +76,7 @@ module.exports = {
             loader: MiniCssExtractPlugin.loader,
             options: {
               hmr: isDev,
-              reload: true
+              reloadAll: true
             }
           },
           'css-loader',
