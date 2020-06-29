@@ -9,6 +9,7 @@
     "comma-dangle": "off",
     "indent": "off",
     "object-curly-spacing": "off",
+    "operator-linebreak": "off",
     "quote-props": "off",
     "require-jsdoc": "off",
     "semi": "off"
