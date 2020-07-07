@@ -1,5 +1,5 @@
-@import 'variables';
-@import 'mixins';
+@import "variables";
+@import "mixins";
 
 .excel__toolbar {
   position: absolute;
@@ -13,6 +13,6 @@
   display: flex;
 
   .button {
-    @include button();
+    @include button(green);
   }
 }

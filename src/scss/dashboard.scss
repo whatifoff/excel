@@ -1,7 +1,8 @@
-@import 'variables';
-@import 'mixins';
+@import "variables";
+@import "mixins";
 
 .db {
+
   &__header {
     position: fixed;
     left: 0;
@@ -35,6 +36,7 @@
     text-decoration: none;
     color: #000;
     text-align: center;
+
     &:hover {
       cursor: pointer;
       color: green;
@@ -56,6 +58,7 @@
     justify-content: space-between;
     color: #202124;
     font-weight: 500;
+    font-size: 16px;
     margin-bottom: 10px;
     padding: 0 12px;
   }
@@ -87,4 +90,5 @@
       }
     }
   }
+
 }
