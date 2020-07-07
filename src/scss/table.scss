@@ -1,5 +1,5 @@
-@import 'variables';
-@import 'mixins';
+@import "variables";
+@import "mixins";
 
 .excel__table {
   position: absolute;
@@ -15,6 +15,7 @@
     min-height: 20px;
     height: $row-height;
   }
+
   .row-info {
     position: relative;
     display: flex;
@@ -26,9 +27,11 @@
     background: #f8f9fa;
     border-top: none;
   }
+
   .row-data {
     display: flex;
   }
+
   .column {
     position: relative;
     display: flex;
@@ -42,6 +45,7 @@
     border-left: 0;
     height: 100%;
   }
+
   .cell {
     min-width: 40px;
     padding: 5px;
@@ -54,15 +58,15 @@
     white-space: nowrap;
     outline: none;
 
+
     &.selected {
       border: none;
       outline: 2px solid $primary-color;
-      z-index: 2px;
+      z-index: 2;
     }
   }
 
-  .col-resize,
-  .row-resize {
+  .col-resize, .row-resize {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -71,9 +75,10 @@
     z-index: 1000;
 
     &:hover {
-      opacity: 1 !important;
+      opacity: 1!important;
     }
   }
+
   .col-resize {
     top: 0;
     width: 4px;
@@ -85,11 +90,11 @@
 
   .row-resize {
     left: 0;
-    right: 0;
     height: 4px;
 
     &:hover {
       cursor: row-resize;
     }
   }
+
 }
